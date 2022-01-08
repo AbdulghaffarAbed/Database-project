@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="846.0" prefWidth="1314.0" style="-fx-background-color: #3d3d3d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ClockController">
+   <children>
+      <TableView fx:id="TableClock" layoutX="532.0" layoutY="60.0" prefHeight="418.0" prefWidth="762.0">
+         <columns>
+            <TableColumn fx:id="Employee_ID_fx" prefWidth="111.0" text="Employee ID" />
+            <TableColumn fx:id="Employee_name_fx" prefWidth="154.0" text="Employee name" />
+            <TableColumn fx:id="Work_on_fx" prefWidth="122.0" text="Work on " />
+            <TableColumn fx:id="Entry_Time_fx" prefWidth="124.0" text="Entry Time" />
+            <TableColumn fx:id="Out_Time_fx" prefWidth="128.0" text="Out Time" />
+            <TableColumn fx:id="Entry_Date_fx" prefWidth="122.0" text="Entry Date" />
+         </columns>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </TableView>
+      <TextField fx:id="Employee_id_txt" alignment="CENTER" layoutX="573.0" layoutY="534.0" prefHeight="40.0" prefWidth="185.0" promptText="Employee ID">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </TextField>
+      <TextField fx:id="Entry_Time_txt" alignment="CENTER" layoutX="806.0" layoutY="534.0" prefHeight="40.0" prefWidth="185.0" promptText="Entry Time">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </TextField>
+      <TextField fx:id="Out_Time_txt" alignment="CENTER" layoutX="806.0" layoutY="619.0" prefHeight="40.0" prefWidth="185.0" promptText="Out Time">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </TextField>
+      <Button fx:id="Add_bt" layoutX="1065.0" layoutY="567.0" mnemonicParsing="false" onAction="#addClockData" prefHeight="65.0" prefWidth="180.0" style="-fx-background-color: #fff;" text="Add" textAlignment="CENTER">
+         <effect>
+            <DropShadow color="WHITE" height="33.44" radius="16.22" width="33.44" />
+         </effect>
+      </Button>
+      <ImageView fitHeight="846.0" fitWidth="508.0" pickOnBounds="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../../Database/DB%20Project/clock1.jpg" />
+         </image>
+      </ImageView>
+      <DatePicker fx:id="Entry_Date_txt" editable="false" layoutX="566.0" layoutY="619.0" prefHeight="40.0" prefWidth="182.0" promptText="Entry Date" style="-fx-background-color: #fff;">
+         <effect>
+            <DropShadow color="WHITE" />
+         </effect>
+      </DatePicker>
+      <Button fx:id="clockReportButton" layoutX="962.0" layoutY="761.0" mnemonicParsing="false" onAction="#SwithchToClockReport" prefHeight="45.0" prefWidth="170.0" style="-fx-background-color: #fff;" text="Clock Report" textAlignment="CENTER">
+         <effect>
+            <DropShadow color="WHITE" height="33.44" radius="16.22" width="33.44" />
+         </effect>
+      </Button>
+      <Button fx:id="employeePageButton" layoutX="648.0" layoutY="761.0" mnemonicParsing="false" onAction="#SwithchToEmployee" prefHeight="45.0" prefWidth="170.0" style="-fx-background-color: #fff;" text="Employee Page" textAlignment="CENTER">
+         <effect>
+            <DropShadow color="WHITE" height="33.44" radius="16.22" width="33.44" />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane layoutY="4.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1700.0" prefWidth="1955.0" style="-fx-background-color: #3d3d3d;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <ScrollPane layoutX="-77.0" layoutY="68.0" prefHeight="1700.0" prefWidth="1619.0" style="-fx-background-color: #3d3d3d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <content>
+            <AnchorPane fx:id="listLabel" prefHeight="1700.0" prefWidth="1985.0" style="-fx-background-color: #fff;">
+               <children>
+                  <StackPane layoutX="8.0" prefHeight="606.0" prefWidth="1977.0" style="-fx-background-color: #003a69;" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="558.0" fitWidth="1390.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="CENTER">
+                           <image>
+                              <Image url="@../../../../Database/DB%20Project/cover1.jpg" />
+                           </image>
+                           <StackPane.margin>
+                              <Insets />
+                           </StackPane.margin>
+                           <effect>
+                              <DropShadow color="#f8f8f8" height="108.08" radius="62.09" width="142.28" />
+                           </effect>
+                        </ImageView>
+                        <Label fx:id="empTxt" alignment="CENTER" prefHeight="111.0" prefWidth="608.0" text="Employee Mangment" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="56.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <StackPane.margin>
+                              <Insets top="113.0" />
+                           </StackPane.margin>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <TableView fx:id="table" layoutX="481.0" layoutY="822.0" onMouseClicked="#selectData" prefHeight="682.0" prefWidth="1285.0" tableMenuButtonVisible="true" AnchorPane.leftAnchor="481.0" AnchorPane.rightAnchor="219.0">
+                    <columns>
+                      <TableColumn fx:id="employee_ID" prefWidth="118.0" text="ID" />
+                      <TableColumn fx:id="employee_name" prefWidth="208.0" text="Name" />
+                        <TableColumn fx:id="dateOfBirth" minWidth="0.0" prefWidth="150.0" text="Date Of Birth" />
+                        <TableColumn fx:id="jobType" prefWidth="219.0" text="Work Place" />
+                        <TableColumn fx:id="experience" prefWidth="208.0" text="Experience" />
+                        <TableColumn fx:id="salaryPerHour" prefWidth="173.0" text="Salary per hour" />
+                        <TableColumn fx:id="salaryPerMonth" prefWidth="191.0" text="Salary Per Month" />
+                    </columns>
+                     <effect>
+                        <DropShadow color="WHITE" height="45.87" radius="21.66" width="42.77" />
+                     </effect>
+                  </TableView>
+                  <AnchorPane layoutX="4.0" layoutY="763.0" prefHeight="800.0" prefWidth="364.0" style="-fx-background-color: #fdee00;" AnchorPane.leftAnchor="36.0">
+                     <children>
+                        <TextField fx:id="IDTxt" alignment="CENTER" layoutX="27.0" layoutY="57.0" prefHeight="50.0" prefWidth="290.0" promptText="ID" style="-fx-border-color: #f0d600;" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow color="#0c2161" height="44.33" radius="20.4975" width="39.66" />
+                           </effect>
+                        </TextField>
+                        <TextField fx:id="nameTxt" alignment="CENTER" layoutX="27.0" layoutY="126.0" prefHeight="50.0" prefWidth="290.0" promptText="Name" style="-fx-border-color: #f0d600;" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow color="#0c2161" height="44.33" radius="20.4975" width="39.66" />
+                           </effect>
+                        </TextField>
+                        <DatePicker fx:id="dateOfBirthTxt" editable="false" layoutX="27.0" layoutY="191.0" prefHeight="50.0" prefWidth="290.0" promptText="Date of birth" style="-fx-border-color: #f0d600;" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.0">
+                           <padding>
+                              <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow color="#0c2161" height="44.33" radius="20.4975" width="39.66" />
+                           </effect>
+                        </DatePicker>
+                        <ComboBox fx:id="workPlaceTxt" layoutX="27.0" layoutY="257.0" onAction="#selectWorkPlaceComboBox" prefHeight="50.0" prefWidth="290.0" promptText="Work place" style="-fx-border-color: #f0d600;" visibleRowCount="5" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.0">
+                           <padding>
+                              <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="OPEN_HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow color="#0c2161" height="44.33" radius="20.4975" width="39.66" />
+                           </effect>
+                        </ComboBox>
+                        <TextField fx:id="experienceTxt" alignment="CENTER" layoutX="27.0" layoutY="323.0" prefHeight="50.0" prefWidth="290.0" promptText="Experience" style="-fx-border-color: #f0d600;" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow color="#0c2161" height="44.33" radius="20.4975" width="39.66" />
+                           </effect>
+                        </TextField>
+                        <TextField fx:id="salaryPerHourTxt" alignment="CENTER" layoutX="27.0" layoutY="389.0" prefHeight="50.0" prefWidth="290.0" promptText="Salary per hour" style="-fx-border-color: #f0d600;" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow color="#0c2161" height="44.33" radius="20.4975" width="39.66" />
+                           </effect>
+                        </TextField>
+                        <TextField fx:id="salaryPerMonthTxt" alignment="CENTER" layoutX="27.0" layoutY="456.0" prefHeight="50.0" prefWidth="290.0" promptText="Salary per month" style="-fx-border-color: #f0d600;" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.0">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                           </padding>
+                           <effect>
+                              <DropShadow color="#0c2161" height="44.33" radius="20.4975" width="39.66" />
+                           </effect>
+                        </TextField>
+                        <Button fx:id="addButton" layoutX="28.0" layoutY="545.0" mnemonicParsing="false" onAction="#addData" prefHeight="47.0" prefWidth="289.0" style="-fx-background-color: #003a69;" text="Add" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.0">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="21.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Bloom />
+                           </effect>
+                        </Button>
+                        <Button fx:id="updateButton" layoutX="28.0" layoutY="626.0" mnemonicParsing="false" onAction="#editData" prefHeight="47.0" prefWidth="289.0" style="-fx-background-color: #003a69;" text="Update" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.0">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="21.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Bloom />
+                           </effect>
+                        </Button>
+                        <Button fx:id="deleteButton" layoutX="28.0" layoutY="708.0" mnemonicParsing="false" onAction="#deleteData" prefHeight="47.0" prefWidth="289.0" style="-fx-background-color: #003a69;" text="Delete" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="38.0">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="21.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <Bloom />
+                           </effect>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <HBox layoutX="4.0" layoutY="603.0" prefHeight="89.0" prefWidth="1942.0" AnchorPane.topAnchor="603.0">
+                     <children>
+                        <Button fx:id="listB" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#SwithchToClock" prefHeight="87.0" prefWidth="388.0" style="-fx-border-width: 0 0 0 2; -fx-border-color: #003a69; -fx-background-color: #ffa500;" text="Clock" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <effect>
+                              <DropShadow color="WHITE" height="24.11" radius="10.7775" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="listB" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="87.0" prefWidth="388.0" style="-fx-border-width: 0 0 0 2; -fx-border-color: #003a69; -fx-background-color: #ffa500;" text="Sections" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <effect>
+                              <DropShadow color="WHITE" height="24.11" radius="10.7775" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="listB" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="87.0" prefWidth="388.0" style="-fx-border-width: 0 0 0 2; -fx-border-color: #003a69; -fx-background-color: #ffa500;" text="Model" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <effect>
+                              <DropShadow color="WHITE" height="24.11" radius="10.7775" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="listB" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="87.0" prefWidth="388.0" style="-fx-border-width: 0 0 0 2; -fx-border-color: #003a69; -fx-background-color: #ffa500;" text="Doctor" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <effect>
+                              <DropShadow color="WHITE" height="24.11" radius="10.7775" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="listB" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="87.0" prefWidth="388.0" style="-fx-border-width: 0 0 0 2; -fx-border-color: #003a69; -fx-background-color: #ffa500;" text="Patient" textAlignment="CENTER" textFill="WHITE">
+                           <font>
+                              <Font name="Book Antiqua Bold Italic" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <effect>
+                              <DropShadow color="WHITE" height="24.11" radius="10.7775" />
+                           </effect>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <ComboBox fx:id="workPlaceSearch" layoutX="546.0" layoutY="728.0" onAction="#selectWorkPlaceComboBox" prefHeight="50.0" prefWidth="290.0" promptText="Work place" style="-fx-border-color: #f0d600;" visibleRowCount="5">
+                     <padding>
+                        <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow color="#0c2161" height="44.33" radius="20.4975" width="39.66" />
+                     </effect>
+                  </ComboBox>
+                  <Button fx:id="serachButton" alignment="CENTER" contentDisplay="CENTER" layoutX="915.0" layoutY="728.0" mnemonicParsing="false" onAction="#sectionSearch" prefHeight="50.0" prefWidth="240.0" style="-fx-border-width: 0 0 0 2; -fx-background-color: #003a69;" text="Search" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Book Antiqua Bold Italic" size="24.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <DropShadow color="WHITE" height="24.11" radius="10.7775">
+                           <input>
+                              <Bloom />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <Button fx:id="refreshButton1" alignment="CENTER" contentDisplay="CENTER" layoutX="1179.0" layoutY="729.0" mnemonicParsing="false" onAction="#refrechDataTable" prefHeight="50.0" prefWidth="240.0" style="-fx-border-width: 0 0 0 2; -fx-background-color: #003a69;" text="Refresh" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Book Antiqua Bold Italic" size="24.0" />
+                     </font>
+                     <effect>
+                        <Bloom />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

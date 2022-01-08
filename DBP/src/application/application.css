@@ -1,0 +1,27 @@
+Button{
+-fx-background-color:#fff;
+-fx-cursor: pointer ;
+}
+
+#listB:hover{
+-fx-background-color: #3d3d3d;
+-fx-color:white;
+-fx-background-color:#1e90ff;
+}
+
+#addButton{
+-fx-border-raduis:25px;
+
+}
+#addButton:hover{
+-fx-background-color:#3f3;
+
+}
+
+#updateButton:hover{
+-fx-background-color:blue;
+}
+
+#deleteButton:hover{
+-fx-background-color:red;
+}
